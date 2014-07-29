@@ -28,14 +28,13 @@ Or install it yourself as:
 1. First of all you need to setup devise as usual. See ( https://github.com/plataformatec/devise#getting-started )
 1. Add `Grape::Devise::Helpers` helpers and include `Grape::Devise::Endpoints` module into your API endpoints class e.g.
 
-```
-
-class MyApi < Grape::API
-  helpers Grape::Devise::Helpers
+  ```
+  class MyApi < Grape::API
+    helpers Grape::Devise::Helpers
+    include Grape::Devise::Endpoints
+  end
+  ```
   
-  include Grape::Devise::Endpoints
-end
-```
 1. Remove Devise routes from `routes.rb` file. We will use Grape-styled endpoints for our API, not default Rails routes.
 1. Add `Devise.add_mapping(:users, {})` to your `devise.rb` initializer. Consider replacing `:users` with appropriate symbol of your devise resource.
 1. Restart your server

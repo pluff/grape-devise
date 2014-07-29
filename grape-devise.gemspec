@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "grape", "> 0.7"
   spec.add_dependency "devise", "> 3.2"
-  spec.add_dependency "active_support", ">= 3.2.6", "< 5"
+  spec.add_dependency "activesupport", ">= 3.2.6", "< 5"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
