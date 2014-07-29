@@ -1,3 +1,6 @@
+require "grape/devise/endpoints/all"
+require "active_support/concern"
+
 module Grape
   module Devise
     module Endpoints
